@@ -1,0 +1,124 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: droid-sans, Arial, sans-serif;
+}
+
+button {
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+.site {
+  &__nav {
+    &-link {
+      color: $color-black;
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      transition: all 150ms;
+
+      @include breakpoint(medium) {
+        color: $color-white;
+        font-size: 1.25rem;
+      }
+
+      &--selected {
+        color: $color-blue-nav;
+        font-weight: bold;
+
+        @include breakpoint(medium) {
+          color: #4ab7ff;
+        }
+      }
+
+      &:hover {
+        color: $color-blue-input;
+      }
+    }
+  }
+}
+
+.event {
+  text-align: center;
+
+  &__description,
+  &__details {
+    color: $color-dark-gray-main;
+  }
+
+  &__description {
+    font-size: 0.9375rem;
+  }
+
+  &__details {
+    font-size: 1.125rem;
+
+    span {
+      font-size: 0.9375rem;
+    }
+  }
+
+  &__cta {
+    color: $color-blue-input;
+  }
+}
+
+.signup {
+  color: $color-white;
+  text-align: center;
+  background-color: $color-dark-blue-bg;
+
+  &__title {
+    font-size: 1.875rem;
+    text-transform: uppercase;
+  }
+
+  &__instruction {
+    font-size: 0.75rem;
+    line-height: 1.2;
+  }
+
+  &__field {
+    color: $color-blue-input;
+    font-size: 0.875rem;
+    font-weight: bold;
+
+    &::placeholder {
+      opacity: 1;
+      text-transform: capitalize;
+    }
+  }
+
+  &__add {
+    font-size: 0.875rem;
+  }
+
+  &__terms {
+    &-link {
+      color: $color-white;
+      font-size: 0.6875rem;
+      text-decoration: underline;
+    }
+  }
+
+  &__submit {
+    color: $color-white;
+    text-transform: uppercase;
+  }
+}
+
+.terms {
+  text-align: center;
+
+  &__content {
+    > p {
+      font-size: 0.875rem;
+    }
+
+    &-header {
+      font-size: 1.125rem;
+    }
+  }
+}

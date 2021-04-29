@@ -1,0 +1,40 @@
+.btn {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.event {
+  &__cta {
+    background-color: rgba($color-limegreen, 0);
+    border: 2px solid $color-limegreen;
+    padding: 0.6875rem 2.1875rem;
+    transition: all 150ms;
+
+    &:hover {
+      background-color: rgba($color-limegreen, 1);
+      color: $color-white;
+    }
+  }
+}
+
+.signup {
+  &__submit {
+    background-color: $color-limegreen;
+    justify-self: end;
+    grid-area: submit;
+    margin-top: 2.8125em;
+    padding: 0.7rem 2.125rem;
+    transition: all 150ms;
+
+    &:hover {
+      background-color: #09a01d;
+    }
+
+    @include breakpoint(medium) {
+      grid-area: 8 / 1 / 9 / 3;
+      justify-self: center;
+      margin-top: 1.5em;
+    }
+  }
+}

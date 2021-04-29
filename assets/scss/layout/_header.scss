@@ -1,0 +1,85 @@
+.site {
+  &__header {
+    background-color: rgba($color-white, 0.85);
+    box-shadow: 0 0 5px 0 rgba($color-black, 0.25);
+    padding: 1.469em 0;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+  }
+
+  &__logo {
+    z-index: -1;
+  }
+
+  &__nav {
+    &-list {
+      z-index: -1;
+
+      @include breakpoint(medium) {
+        display: none;
+        background-color: $color-dark-gray-main;
+        box-shadow: 0 0 5px 0 rgba($color-black, 0.25);
+        flex-direction: column;
+        padding: 5em 2em;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 20em;
+      }
+
+      @include breakpoint(small) {
+        width: 100%;
+      }
+
+      &--open {
+        display: block;
+      }
+    }
+
+    &-hamburger {
+      display: none;
+
+      span {
+        background-color: $color-black;
+        display: block;
+        height: 3px;
+        margin-bottom: 5px;
+        width: 2em;
+        transition: all 250ms;
+      }
+
+      &--open {
+        transform: rotate(180deg);
+
+        span {
+          background-color: $color-white;
+
+          &:nth-of-type(1) {
+            transform: rotate(45deg) translateY(11px);
+          }
+
+          &:nth-of-type(2) {
+            opacity: 0;
+          }
+
+          &:nth-of-type(3) {
+            transform: rotate(-45deg) translateY(-11px);
+          }
+        }
+      }
+
+      @include breakpoint(medium) {
+        display: block;
+      }
+    }
+
+    &-item {
+      margin-right: 1.25em;
+
+      @include breakpoint(medium) {
+        margin: 0 0 1em;
+      }
+    }
+  }
+}

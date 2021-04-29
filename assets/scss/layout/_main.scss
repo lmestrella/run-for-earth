@@ -1,0 +1,47 @@
+.event {
+  position: relative;
+  margin-top: $big-margin-top;
+  min-height: 590px;
+  // background-image: url(../images/background.png);
+  // background-position: bottom -1px center;
+  // background-repeat: no-repeat;
+  // background-size: 100%;
+
+  &__picture {
+    margin-bottom: 5px;
+  }
+
+  &__description {
+    max-width: 53ch;
+  }
+
+  &__description,
+  &__details {
+    margin-bottom: 1.5625em;
+  }
+
+  &__details {
+    > span {
+      display: inline-block;
+
+      @include breakpoint(small) {
+        margin-top: 1em;
+      }
+    }
+
+    @include breakpoint(small) {
+      max-width: 204px;
+    }
+  }
+
+  &__bg {
+    bottom: -1px;
+    position: absolute;
+    z-index: -999;
+
+    &,
+    > img {
+      width: 100%;
+    }
+  }
+}

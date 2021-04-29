@@ -1,0 +1,54 @@
+.terms {
+  background-color: rgba($color-black, 0.75);
+  bottom: 0;
+  // display: none;
+  opacity: 0;
+  visibility: hidden;
+  left: 0;
+  right: 0;
+  position: absolute;
+  top: 0;
+  z-index: 999;
+
+  &:target {
+    // display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__close {
+    position: absolute;
+    right: 0.5em;
+    top: 0.2em;
+    font-size: 2.5em;
+  }
+
+  &__content {
+    background-color: $color-white;
+    margin: 5em auto;
+    position: relative;
+    padding: 3em 5%;
+    width: 90%;
+    max-width: 50.3125em;
+    transform: scale(0.35);
+    transition: all 400ms;
+
+    > p {
+      margin: auto;
+      max-width: 80ch;
+
+      > br {
+        display: block;
+        margin-top: 2em;
+      }
+    }
+
+    &-header {
+      margin-bottom: 2em;
+    }
+  }
+
+  &:target &__content {
+    transform: scale(1);
+  }
+}
