@@ -66,6 +66,17 @@
     margin-bottom: 1.25em;
     min-height: 2.857em;
     padding: 0 0.9375rem;
+    -moz-appearance: textfield;
+
+    &--error {
+      border: 1px solid #ff7e7e;
+    }
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
 
     @include breakpoint(small) {
       margin: 0 0 1.25em !important;
@@ -108,4 +119,10 @@
 
 .divider {
   margin-bottom: 10px;
+}
+
+.err-msg {
+  color: #ff7e7e;
+  margin-bottom: 0.75em;
+  // align-self: flex-start;
 }

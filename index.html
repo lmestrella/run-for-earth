@@ -13,7 +13,12 @@
 
   <!-- droid-sans font -->
   <link rel="stylesheet" href="https://use.typekit.net/gwo5nsb.css">
+
   <link rel="stylesheet" href="./assets/scss/style.css">
+  <!--[if gte IE 8]>
+    <link rel="stylesheet" href="./assets/scss/style-ie.css">
+  <![endif]-->
+
   <script src="./assets/js/app.js" defer></script>
   <title>Run For Earth</title>
 </head>
@@ -26,13 +31,13 @@
       <nav class="site__nav">
         <ul class="site__nav-list flex">
           <li class="site__nav-item">
-            <a href="#_" class="site__nav-link site__nav-link--selected">Home</a>
+            <a href="#" class="site__nav-link site__nav-link--selected">Home</a>
           </li>
           <li class="site__nav-item">
-            <a href="#_" class="site__nav-link">Run Information</a>
+            <a href="#info" class="site__nav-link">Run Information</a>
           </li>
           <li class="site__nav-item">
-            <a href="#_" class="site__nav-link">Registration</a>
+            <a href="#signup" class="site__nav-link">Registration</a>
           </li>
           <li class="site__nav-item">
             <a href="#_" class="site__nav-link">Contact Us</a>
@@ -57,7 +62,7 @@
         A 3K run alongside the candidates of Miss Philippines Earth 2015
         to aid the Calumpang River Rehabilitation
       </p>
-      <p class="event__details">
+      <p class="event__details" id="info">
         APRIL 25, 2015 | Assembly time: 5:00AM | SM City Batangas Parking Grounds
         <br>
         <span>Registration fee: Php500 inclusive of race kit with shirt</span>
@@ -69,7 +74,7 @@
     </div>
   </main>
 
-  <section class="signup">
+  <section class="signup" id="signup">
     <div class="content-wrapper flex flex-fd-col flex-ai-c">
       <h2 class="signup__title">Sign Up</h2>
       <div class="divider">
@@ -81,13 +86,13 @@
         praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
       </p>
       <form method="GET" action="" class="signup__form grid">
-        <input class="signup__field" type="text" name="firstName" placeholder="First Name" required>
-        <input class="signup__field" type="text" name="lastName" placeholder="Last Name" required>
-        <input class="signup__field" type="text" name="address1" placeholder="Complete Address" required>
-        <input class="signup__field" type="text" name="address2" placeholder="" required>
-        <input class="signup__field" type="text" name="birthday" placeholder="Birthday" required>
-        <input class="signup__field" type="text" name="contact" placeholder="Contact Number">
-        <input class="signup__field" type="text" name="email" placeholder="Email Address" required>
+        <input class="signup__field" type="text" name="firstName" placeholder="First Name">
+        <input class="signup__field" type="text" name="lastName" placeholder="Last Name">
+        <input class="signup__field" type="text" name="address1" placeholder="Complete Address">
+        <input class="signup__field" type="text" name="address2" placeholder="">
+        <input class="signup__field" type="text" name="birthday" placeholder="Birthday">
+        <input class="signup__field" type="number" name="contact" placeholder="Contact Number">
+        <input class="signup__field" type="text" name="email" placeholder="Email Address">
         <select class="signup__field signup__select" name="shirtSize" id="shirtSize">
           <option value="" selected>Shirt size</option>
           <option value="s">s</option>
@@ -100,7 +105,7 @@
           Add more participants
         </span>
         <div class="signup__terms flex flex-ai-c">
-          <input class="signup__terms-checkbox" type="checkbox" name="terms" required>
+          <input class="signup__terms-checkbox" type="checkbox" name="terms">
           <a class="signup__terms-link" href="#terms">I have read and understand the Terms and Conditions</a>
         </div>
         <button class="btn signup__submit">Submit</button>

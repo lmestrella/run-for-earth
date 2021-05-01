@@ -1,0 +1,54 @@
+.site__logo {
+  float: left;
+}
+
+.site__nav-list {
+  float: right;
+}
+
+.site__nav-item {
+  float: left;
+}
+
+.event {
+  margin: 0 auto;
+}
+
+.event__picture {
+  display: inline-block;
+  margin-top: 50px;
+}
+
+.event__picture img {
+  margin: 0 auto;
+}
+
+.event__description, .event__details {
+  text-align: center;
+}
+
+.event__description {
+  padding: 0 23.5%;
+}
+
+.event__cta {
+  background: #ffffff;
+  display: block;
+  margin: 0 auto;
+  padding: 1em 1.5em;
+}
+
+.content-wrapper {
+  width: 900px;
+}
+
+.signup__form {
+  margin: auto;
+}
+
+.signup__field {
+  margin: 1em auto;
+  display: block;
+  width: 300px;
+}
+/*# sourceMappingURL=style-ie.css.map */

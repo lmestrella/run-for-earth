@@ -1,0 +1,60 @@
+.site {
+  &__logo {
+    float: left;
+  }
+
+  &__nav {
+    &-list {
+      float: right;
+    }
+
+    &-item {
+      float: left;
+    }
+  }
+}
+
+.event {
+  margin: 0 auto;
+
+  &__picture {
+    display: inline-block;
+    margin-top: 50px;
+
+    img {
+      margin: 0 auto;
+    }
+  }
+
+  &__description,
+  &__details {
+    text-align: center;
+  }
+
+  &__description {
+    padding: 0 23.5%;
+  }
+
+  &__cta {
+    background: #ffffff;
+    display: block;
+    margin: 0 auto;
+    padding: 1em 1.5em;
+  }
+}
+
+.content-wrapper {
+  width: 900px;
+}
+
+.signup {
+  &__form {
+    margin: auto;
+  }
+
+  &__field {
+    margin: 1em auto;
+    display: block;
+    width: 300px;
+  }
+}

@@ -86,7 +86,7 @@ button {
     font-weight: bold;
 
     &::placeholder {
-      opacity: 1;
+      font-weight: normal;
       text-transform: capitalize;
     }
   }
